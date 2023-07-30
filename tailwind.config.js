@@ -322,6 +322,10 @@ module.exports = {
       shadow: {
         500: "rgba(112, 144, 176, 0.08)",
       },
+      fsrBluePrimary: "#1b4e79",
+      fsrBlueSecondary1: "#7aa2d5",
+      fsrBlueSecondary2: "#245c94",
+      fsrBlueSecondary3: "#3f4851",
     }),
   },
   plugins: [require("tailwindcss-rtl")],

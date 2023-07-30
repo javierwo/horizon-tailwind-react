@@ -1,0 +1,108 @@
+import React from 'react'
+import Laboral from './components/Laboral';
+import Sri from './components/Sri';
+import CentralRiesgos from './components/CentralRiesgos';
+import FamiliaresBar from './components/FamiliaresBar';
+import ClientCard from 'components/clientcard/clientCard';
+import NumsTable from '../tablas/components/NumsTable';
+import CorreosTable from '../tablas/components/CorreosTable';
+
+import FamiliarCard from './components/FamiliarCard';
+
+import Tabs from './components/Tabs';
+import { FaFileInvoiceDollar } from 'react-icons/fa';
+
+import { MdContacts, MdListAlt, MdBusiness } from 'react-icons/md';
+
+import ResumenTab from './components/ResumenTab';
+
+const SearchById = () => {
+
+  const tabs = [
+    { 
+      title: 'Resumen', 
+      icon: <MdContacts />, 
+      content: <ResumenTab /> 
+
+    },
+    { 
+      title: 'Datos Personales', 
+      icon: <MdListAlt />, 
+      content:         
+        <ClientCard 
+          nombre="Edwin Alfonso Quishpe Suquisupa"
+        /> 
+    },
+    { 
+      title: 'IESS', 
+      icon: <MdBusiness />, 
+      content: <Laboral />
+    },
+    { 
+      title: 'SRI', 
+      icon: <FaFileInvoiceDollar />, 
+      content: <Sri />
+    },
+  ];
+
+  return (
+
+
+
+
+    
+      <div>
+        {/**bg-red-100 bg-green-200
+        * Cuando el tamaño de la pantalla es grande (pantalla grande o más grande), se utiliza una cuadrícula de 12 columnas.
+        * Cuando las pantallas son pequeñas, las propiedades "lg:grid" y "lg:grid-cols-12" no se aplican.
+        * "grid-cols-1": indica que la cuadrícula del elemento div tendrá una sola columna. 
+        *    Los elementos hijos se organizarán en una sola columna en el diseño de cuadrícula.
+        * "lg:!grid-cols-12": Significa que cuando el tamaño de la pantalla sea grande o mayor 
+        *    (media query "lg"), la regla "grid-cols-12" no se aplicará. En su lugar, 
+        *    se utilizará la regla de cuadrícula predeterminada establecida para pantallas grandes.
+        */}
+
+        <div className='mt-3'>
+          <Tabs tabs={tabs} />
+        </div>
+
+                  {/**
+        <div className="mt-3 w-full flex h-fit flex-col gap-5 lg:grid lg:grid-cols-12">
+
+           * Esto indica que el elemento debe ocupar 5 columnas en pantallas pequeñas y medianas, 
+           * 6 columnas en pantallas grandes, y 4 columnas en pantallas extra grandes (3XL).
+        
+          <div className="col-span-5 lg:!mb-0">
+            <ClientCard 
+              nombre="Edwin Alfonso Quishpe Suquisupa"
+            />
+          </div>
+          <div className='col-span-4 lg:!mb-0'>
+            <CentralRiesgos />
+          </div>
+          <div className="col-span-3 lg:!mb-0">
+            <div className='grid grid-cols-1 gap-5'>
+              <Laboral />
+              <Sri />
+            </div>
+          </div>
+        </div>
+        <div className='w-full h-fit flex flex-col gap-5 md:grid md:grid-cols-2'>
+          <div className="w-full h-full">
+            <NumsTable />
+          </div>
+          <div className="w-full h-full">
+            <CorreosTable />
+          </div>
+        </div>
+        <div className="w-full overflow-x-auto">
+          <FamiliarCard />
+        </div>
+*/}
+
+
+    </div>
+  )
+}
+
+export default SearchById;
