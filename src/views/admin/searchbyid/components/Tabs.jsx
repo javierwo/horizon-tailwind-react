@@ -10,13 +10,13 @@ const Tabs = ({ tabs }) => {
 
   return (
     <div>
-      <div className="flex justify-start mt-4 flex-col md:flex-row">
+      <div className="flex flex-col my-4 items-center justify-between md:flex-row bg-[#f5f5f5] p-2 rounded-xl">
         {tabs.map((tab, index) => (
           <button
             key={index}
             className={`${
-              index === activeTab ? 'border-b-4 border-b-navy-700 text-navy-700 font-semibold' : 'text-gray-600 font-extralight'
-            } py-2 px-4 mb-4 flex items-center gap-2 h-[50px] transition-all duration-200`}
+              index === activeTab ? 'font-extrabold bg-white rounded-xl' : 'text-[#86868b] font-light'
+            } py-2 px-2 flex items-center gap-2 transition-all duration-200`}
             onClick={() => handleTabClick(index)} 
           >
             {tab.icon}
@@ -24,7 +24,7 @@ const Tabs = ({ tabs }) => {
           </button>
         ))}
       </div>
-      <div>
+      <div className=' mt-3 rounded-xl'>
         {tabs[activeTab].content}
       </div>
     </div>

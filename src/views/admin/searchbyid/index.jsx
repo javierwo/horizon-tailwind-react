@@ -28,7 +28,6 @@ const SearchById = () => {
   const searchValueState = useSelector((state) => state.searchValueState)
 
   if (searchValueState.value === null) {
-    console.log('el estado esta null')
     return (
       <div className='bg-white rounded-xl p-[16px]'>
         Ningún registro para mostrar.
@@ -80,13 +79,8 @@ const SearchById = () => {
   ];
 
   return (
-    <div className='bg-white rounded-xl p-[16px]'>
-      <div>
-        CEDULA: {searchValueState.value}
-      </div>
-      <div className='mt-3'>
-        <Tabs tabs={tabs} />
-      </div>
+    <div>
+      <Tabs tabs={tabs} />
     </div>
   )
 }

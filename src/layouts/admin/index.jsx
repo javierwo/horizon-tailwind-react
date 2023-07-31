@@ -121,7 +121,7 @@ export default function Admin(props) {
        * Contenedor para el contenido principal.
       */
       }
-      <div className="h-full w-full bg-lightPrimary dark:!bg-navy-900">
+      <div className="h-full w-full bg-[#fbfbfb] dark:!bg-navy-900">
 
         {
         /* Main Content 
